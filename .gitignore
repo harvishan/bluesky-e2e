@@ -1,0 +1,11 @@
+/vendor
+.vagrant
+/.git
+/.idea
+/.vagrant
+/node_modules
+*.DS_STORE
+node_modules
+platform-core-sdk
+.DS_STORE
+
