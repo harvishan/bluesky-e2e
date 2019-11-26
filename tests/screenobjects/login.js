@@ -4,16 +4,20 @@ import AppScreen from './app.screen';
 class LoginScreen extends AppScreen{
 
     get emailAddressField() {
-        return $('~emailLoginFrom');
+        return $('~emailLogin');
     }
 
     get passwordField (){
-        return $('~passwordLoginFrom');
+        return $('~passwordLogin');
     }
 
     get loginButton (){
         // return $('//android.view.ViewGroup[3]');
-        return $('~Login');
+        return $('~loginButton');
+    }
+
+    get forgotPasswordLink(){
+        return $('~forgotPasswordLogin');
     }
 }
 
