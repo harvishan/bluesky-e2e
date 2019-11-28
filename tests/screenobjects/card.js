@@ -42,6 +42,25 @@ class CardScreen extends AppScreen{
         return $('~mcqCardQuestion');
     }
 
+    get mcqRadioButton(){
+        return $$('~radioButton');
+    }
+
+    get addNote(){
+        return $('~cardTurnTapButton');
+    }
+
+    get likeCount(){
+        return $('~likeCountLabel');
+    }
+
+    get bookMark(){
+        return $('~bookmarkButton');
+    }
+
+    get backButton(){
+        return $('~Go back');
+    }
 
 }
 export default new CardScreen();

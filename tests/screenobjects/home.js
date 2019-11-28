@@ -19,6 +19,11 @@ class HomeScreen extends AppScreen{
         return $('~cardContainer');
     }
 
+    get bookmarkTab(){
+        return $('~bookmark');
+    }
+
+
 
 
 }
