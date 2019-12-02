@@ -9,14 +9,6 @@ describe('WebdriverIO and Appium, when interacting with a login form,', () => {
     //     LoginScreen.waitForIsShown(true);
     // });
 
-    fit('should be able to navigate back to Login page by clicking back button of reset password page', () => {
-        LoginScreen.forgotPasswordLink.click();
-        ResetPasswordScreen.emailAddressField.waitForExist();
-        ResetPasswordScreen.backButton.click();
-        LoginScreen.emailAddressField.waitForExist();
-        let isExisting = LoginScreen.emailAddressField.isExisting();
-        console.log(isExisting);
-    });
 
     fit('should not be allowed to proceed if the email does not exist in the system', () => {
         LoginScreen.forgotPasswordLink.click();

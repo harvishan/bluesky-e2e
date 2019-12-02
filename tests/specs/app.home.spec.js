@@ -3,6 +3,9 @@ import HomeScreen from '../screenobjects/home';
 import ResetPasswordScreen from '../screenobjects/reset_password';
 import CardScreen from '../screenobjects/card';
 import BookmarkScreen from '../screenobjects/bookmark';
+import ProfileScreen from '../screenobjects/profile';
+import BadgesScreen from '../screenobjects/badges';
+
 
 describe('Logged in user whose default instance is cricket,', () => {
     // beforeEach(() => {
@@ -208,5 +211,22 @@ describe('Logged in user whose default instance is cricket,', () => {
         HomeScreen.bookmarkTab.click();
         BookmarkScreen.noBookmarkText.waitForExist();
         expect(CardScreen.mcqQuestion.getText()).toEqual('No bookmarks');
+    });
+
+    it('should be able view badges', () => {
+        HomeScreen.profileTab.click();
+        ProfileScreen.badgesLink.waitForExist();
+        ProfileScreen.badgesLink.click();
+        BadgesScreen.badgesContainer.waitForExist();
+        CardScreen.backButton.click();
+    });
+
+    it('should be able view activities', () => {
+        ProfileScreen.activitiesLink.waitForExist().click();
+        // HomeScreen.profileTab.click();
+        // ProfileScreen.badgesLink.waitForExist();
+        // ProfileScreen.badgesLink.click();
+        // BadgesScreen.badgesContainer.waitForExist();
+        // CardScreen.backButton.click();
     });
 });

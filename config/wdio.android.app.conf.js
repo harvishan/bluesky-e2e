@@ -6,7 +6,17 @@ const { config } = require('./wdio.shared.conf');
 // ============
 config.specs = [
     // './tests/specs/**/app.login.spec.js',
-    './tests/specs/**/app.home.spec.js',
+    //'./tests/specs/**/app.home.spec.js',
+    // './tests/specs/**/app*.spec.js',
+    //'./tests/specs/**/app.login.spec.js',
+    //'./tests/specs/**/app.signup.spec.js',
+    // './tests/specs/**/app.profile.spec.js',
+    // './tests/specs/**/app.instance.spec.js',
+    './tests/specs/**/app.edit.profile.spec.js',
+    //'./tests/specs/**/app.home.spec.js',
+    // './tests/specs/**/app.instance.spec.js'
+    // './tests/specs/**/app.login.spec.js',
+    // './tests/specs/**/app.home.spec.js',
 
 ];
 

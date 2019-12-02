@@ -1,18 +1,22 @@
 import NativeAlert from '../helpers/NativeAlert';
 import AppScreen from './app.screen';
-import Carousel from './components/carousel';
 
-const SELECTORS = {
-    SWIPE_SCREEN: '~cardContainer'
-};
 class HomeScreen extends AppScreen{
 
     get homeButton() {
         return $('~home');
     }
 
-    get deck(){
+    get deck() {
         return $('~deckContainer');
+    }
+
+    get bookmarksLink() {
+        return $('~bookmark');
+    }
+
+    get notificationsLink() {
+        return $('~notification');
     }
 
     get card(){
@@ -23,8 +27,9 @@ class HomeScreen extends AppScreen{
         return $('~bookmark');
     }
 
-
-
+    get profileTab() {
+        return $('~profile');
+    }
 
 }
 
