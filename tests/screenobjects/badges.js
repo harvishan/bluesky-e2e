@@ -5,7 +5,7 @@ import Carousel from './components/carousel';
 class BadgesScreen extends AppScreen{
 
     get badgesContainer() {
-        return $('~badgesContainer');
+        return $('~badgeContainer');
     }
 
 }

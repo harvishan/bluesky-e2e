@@ -14,6 +14,7 @@ describe('The logged in user,', () => {
 
     fit('should be able join instance successfully from all Instances', () => {
         HomeScreen.profileTab.click();
+        ProfilePageScreen.selectInstanceLink.waitForExist();
         ProfilePageScreen.selectInstanceLink.click();
         InstanceScreen.AllInstanceLink.waitForExist();
         InstanceScreen.AllInstanceLink.click();
@@ -23,19 +24,27 @@ describe('The logged in user,', () => {
         ProfilePageScreen.selectInstanceLink.waitForExist();
         ProfilePageScreen.selectInstanceLink.click();
         InstanceScreen.MyInstancesLink.click();
+        InstanceScreen.instancesFromList[1].waitForExist();
         expect(InstanceScreen.instancesFromList.length).toEqual(2);
     });
 
-    fit('should be able remove instance successfully from all Instances', () => {
-        InstanceScreen.InstanceDeleteButton[0].click();
-        CardScreen.backButton.click();
-        ProfilePageScreen.selectInstanceLink.waitForExist();
-        ProfilePageScreen.selectInstanceLink.click();
-        InstanceScreen.MyInstancesLink.click();
-        expect(InstanceScreen.instancesFromList.length).toEqual(1);
-        CardScreen.backButton.click();
-
-    });
+    // fit('should be able remove instance successfully from all Instances', () => {
+    //     InstanceScreen.AllInstanceLink.waitForExist();
+    //     InstanceScreen.InstanceDeleteButton[0].click();
+    //     InstanceScreen.AllInstanceLink.waitForExist();
+    //     InstanceScreen.instancesFromList[0].waitForExist();
+    //     InstanceScreen.AllInstanceLink.click();
+    //     InstanceScreen.InvitationCodeField.waitForExist();
+    //     InstanceScreen.MyInstancesLink.click();
+    //     CardScreen.backButton.waitForExist();
+    //     CardScreen.backButton.click();
+    //     ProfilePageScreen.selectInstanceLink.waitForExist();
+    //     ProfilePageScreen.selectInstanceLink.click();
+    //     InstanceScreen.MyInstancesLink.click();
+    //     expect(InstanceScreen.instancesFromList.length).toEqual(1);
+    //     CardScreen.backButton.click();
+    //
+    // });
 
     // fit('should not be able to join invite only instance using an invalid code', () => {
     //     ProfilePageScreen.LogoutButton.click();
